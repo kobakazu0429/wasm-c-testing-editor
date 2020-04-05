@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es2015",
+    "module": "esnext",
     "target": "es2018",
     "jsx": "react",
     "typeRoots": ["node_modules/@types", "src/typings"],
