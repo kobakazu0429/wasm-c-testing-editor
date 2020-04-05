@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { App } from "./components/App";
 
+import "./initMonaco";
+
 if ("WebAssembly" in window) {
   ReactDOM.render(
     <BrowserRouter>
