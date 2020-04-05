@@ -3,9 +3,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
-  entry: { app: path.resolve(__dirname, "../src/index.tsx") },
+  entry: {
+    app: path.resolve(__dirname, "../src/index.tsx"),
+  },
 
   resolve: {
     extensions: [".js", ".ts", ".jsx", ".tsx"],
@@ -19,7 +22,8 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin({
       workers: 1,
       tslint: true
-    })
+    }),
+    new MonacoWebpackPlugin()
   ],
 
   module: {
@@ -45,10 +49,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: [
-          "style-loader",
-          { loader: "css-loader", options: { url: false } }
-        ]
+        use: ["style-loader", "css-loader"]
       }
     ]
   }

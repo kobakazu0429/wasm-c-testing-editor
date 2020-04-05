@@ -12,8 +12,10 @@ module.exports = merge(common, {
   devtool: "source-map",
 
   output: {
+    globalObject: "globalThis",
     path: path.resolve(__dirname, "../dist/"),
-    filename: "[name]-[hash].js"
+    filename: "[name].js",
+    chunkFilename: "[name].[id].[contenthash].js"
   },
 
   plugins: [new CleanWebpackPlugin(), new ManifestPlugin()],
