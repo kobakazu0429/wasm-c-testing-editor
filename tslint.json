@@ -5,6 +5,7 @@
   "rules": {
     "curly": [true, "ignore-same-line"],
     "no-console": false,
+    "no-bitwise": false,
     "no-unused-expression": [true, "allow-fast-null-checks"],
     "variable-name": [
       true,
