@@ -7,6 +7,7 @@ export function EditorPanel(props: {
   value: string;
   onUpdate: (content: string) => void;
   focusWithDidMount?: boolean;
+  language: string;
 }) {
   return (
     <Flex h="100%" w="100%" direction="column">
@@ -26,7 +27,7 @@ export function EditorPanel(props: {
           <MonacoEditor
             key={props.name}
             value={props.value}
-            language="typescript"
+            language={props.language}
             onChangeValue={value => props.onUpdate(value)}
             focusWithDidMount={props.focusWithDidMount}
           />

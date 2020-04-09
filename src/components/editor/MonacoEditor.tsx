@@ -3,7 +3,8 @@ import * as monaco from "monaco-editor";
 
 export default (props: {
   value: string;
-  language?: "typescript" | "css" | "javascript";
+  // language?: "typescript" | "css" | "javascript";
+  language: string;
   onChangeValue: (value: string) => void;
   focusWithDidMount?: boolean;
 }) => {
