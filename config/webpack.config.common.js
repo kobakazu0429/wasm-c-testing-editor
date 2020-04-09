@@ -26,6 +26,10 @@ module.exports = {
     new MonacoWebpackPlugin()
   ],
 
+  node: {
+    fs: "empty"
+  },
+
   module: {
     rules: [
       {
